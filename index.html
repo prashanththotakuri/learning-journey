@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashanth - Full Stack Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .skill-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                    PT
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                    <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                    <a href="#learning" class="hover:text-blue-400 transition-colors">Learning</a>
+                    <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+                <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 min-h-screen flex items-center hero-gradient relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative z-10 fade-in">
+            <div class="mb-8 inline-block">
+                <div class="w-28 h-28 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 p-1 mx-auto">
+                    <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-5xl">
+                        💻
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-6xl sm:text-7xl font-bold mb-4">
+                Prashanth Thotakuri
+            </h1>
+            <p class="text-2xl text-gray-300 mb-4">Full Stack Developer</p>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                Building beautiful, functional web experiences with modern technologies. Learning and coding every single day.
+            </p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="#projects" class="px-8 py-4 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold transition-colors">
+                    View My Work
+                </a>
+                <a href="#contact" class="px-8 py-4 border-2 border-blue-400 hover:bg-blue-400/10 rounded-lg font-semibold transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-bold mb-12 text-center">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-700/50 rounded-lg p-8 border border-gray-600 hover:border-blue-400 transition-colors skill-card">
+                    <div class="w-full h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg mb-4 flex items-center justify-center text-5xl">
+                        🌐
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Portfolio Website</h3>
+                    <p class="text-gray-400 mb-4">Modern, responsive portfolio showcasing projects with Tailwind CSS and React</p>
+                    <div class="flex gap-2 mb-4 flex-wrap">
+                        <span class="text-sm bg-blue-500/30 px-3 py-1 rounded-full">React</span>
+                        <span class="text-sm bg-blue-500/30 px-3 py-1 rounded-full">Tailwind</span>
+                        <span class="text-sm bg-blue-500/30 px-3 py-1 rounded-full">Responsive</span>
+                    </div>
+                    <a href="#" class="text-blue-400 hover:text-cyan-400 font-semibold">View Project →</a>
+                </div>
+
+                <div class="bg-gray-700/50 rounded-lg p-8 border border-gray-600 hover:border-blue-400 transition-colors skill-card">
+                    <div class="w-full h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg mb-4 flex items-center justify-center text-5xl">
+                        📚
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Learning Journey</h3>
+                    <p class="text-gray-400 mb-4">Complete learning documentation with algorithms, concepts, and daily challenges</p>
+                    <div class="flex gap-2 mb-4 flex-wrap">
+                        <span class="text-sm bg-blue-500/30 px-3 py-1 rounded-full">JavaScript</span>
+                        <span class="text-sm bg-blue-500/30 px-3 py-1 rounded-full">DSA</span>
+                        <span class="text-sm bg-blue-500/30 px-3 py-1 rounded-full">Web Dev</span>
+                    </div>
+                    <a href="#" class="text-blue-400 hover:text-cyan-400 font-semibold">View Project →</a>
+                </div>
+
+                <div class="bg-gray-700/50 rounded-lg p-8 border border-gray-600 hover:border-blue-400 transition-colors skill-card">
+                    <div class="w-full h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg mb-4 flex items-center justify-center text-5xl">
+                        ⚙️
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">GitHub Automation</h3>
+                    <p class="text-gray-400 mb-4">Smart automation tools for consistent daily commits and meaningful contribution tracking</p>
+                    <div class="flex gap-2 mb-4 flex-wrap">
+                        <span class="text-sm bg-blue-500/30 px-3 py-1 rounded-full">Node.js</span>
+                        <span class="text-sm bg-blue-500/30 px-3 py-1 rounded-full">Automation</span>
+                        <span class="text-sm bg-blue-500/30 px-3 py-1 rounded-full">GitHub API</span>
+                    </div>
+                    <a href="#" class="text-blue-400 hover:text-cyan-400 font-semibold">View Project →</a>
+                </div>
+
+                <div class="bg-gray-700/50 rounded-lg p-8 border border-gray-600 hover:border-blue-400 transition-colors skill-card">
+                    <div class="w-full h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg mb-4 flex items-center justify-center text-5xl">
+                        🔧
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Developer Tools</h3>
+                    <p class="text-gray-400 mb-4">Open source utilities and tools to improve developer productivity and workflow</p>
+                    <div class="flex gap-2 mb-4 flex-wrap">
+                        <span class="text-sm bg-blue-500/30 px-3 py-1 rounded-full">CLI</span>
+                        <span class="text-sm bg-blue-500/30 px-3 py-1 rounded-full">Open Source</span>
+                        <span class="text-sm bg-blue-500/30 px-3 py-1 rounded-full">Utilities</span>
+                    </div>
+                    <a href="#" class="text-blue-400 hover:text-cyan-400 font-semibold">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-bold mb-12 text-center">Skills & Tech Stack</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 rounded-lg p-8 border border-gray-700 skill-card">
+                    <h3 class="text-2xl font-bold mb-6 text-blue-400">Frontend</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>✓ React & Vue.js</li>
+                        <li>✓ Tailwind CSS</li>
+                        <li>✓ JavaScript/ES6+</li>
+                        <li>✓ HTML5 & CSS3</li>
+                        <li>✓ Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-8 border border-gray-700 skill-card">
+                    <h3 class="text-2xl font-bold mb-6 text-cyan-400">Backend</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>✓ Node.js & Express</li>
+                        <li>✓ Python</li>
+                        <li>✓ REST APIs</li>
+                        <li>✓ Database Design</li>
+                        <li>✓ Authentication</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-8 border border-gray-700 skill-card">
+                    <h3 class="text-2xl font-bold mb-6 text-purple-400">Tools & Others</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>✓ Git & GitHub</li>
+                        <li>✓ Docker</li>
+                        <li>✓ Linux/Ubuntu</li>
+                        <li>✓ VS Code</li>
+                        <li>✓ Terminal/CLI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section id="learning" class="py-20 px-4 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-bold mb-8 text-center">Learning Journey</h2>
+            <p class="text-xl text-gray-400 mb-12 text-center max-w-2xl mx-auto">
+                I commit to coding and learning every single day. Check my GitHub for learning documentation, algorithm solutions, and daily progress.
+            </p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gray-700/50 rounded-lg p-6 border border-gray-600 text-center">
+                    <div class="text-5xl font-bold text-blue-400 mb-2">365+</div>
+                    <div class="text-gray-300 text-lg">Days Committed</div>
+                </div>
+                <div class="bg-gray-700/50 rounded-lg p-6 border border-gray-600 text-center">
+                    <div class="text-5xl font-bold text-cyan-400 mb-2">150+</div>
+                    <div class="text-gray-300 text-lg">Problems Solved</div>
+                </div>
+                <div class="bg-gray-700/50 rounded-lg p-6 border border-gray-600 text-center">
+                    <div class="text-5xl font-bold text-purple-400 mb-2">50+</div>
+                    <div class="text-gray-300 text-lg">Concepts Mastered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-8">Let's Work Together</h2>
+            <p class="text-xl text-gray-400 mb-12">
+                Always interested in hearing about new projects and opportunities.
+            </p>
+            <div class="flex gap-6 justify-center flex-wrap">
+                <a href="mailto:prasanthdev@gmail.com" class="px-8 py-4 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold transition-colors">
+                    📧 Email Me
+                </a>
+                <a href="https://github.com/prashanththotakuri" class="px-8 py-4 border-2 border-blue-400 hover:bg-blue-400/10 rounded-lg font-semibold transition-colors">
+                    🐙 GitHub
+                </a>
+                <a href="#" class="px-8 py-4 border-2 border-blue-400 hover:bg-blue-400/10 rounded-lg font-semibold transition-colors">
+                    💼 LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8 px-4 text-center text-gray-400">
+        <p>Made with ❤️ • Continuously learning and building</p>
+        <p class="text-sm mt-2">© 2024 Prashanth Thotakuri. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            alert('Mobile menu - you can expand this later');
+        });
+    </script>
+</body>
+</html>
