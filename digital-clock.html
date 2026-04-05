@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .clock {
+            font-size: 40px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Current Time in Multiple Time Zones</h1>
+    <div class="clock" id="utc"></div>
+    <div class="clock" id="est"></div>
+    <div class="clock" id="pst"></div>
+    <div class="clock" id="cst"></div>
+
+    <script>
+        function updateClocks() {
+            const options = { timeZoneName: 'short', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const utcDate = new Date();
+
+            document.getElementById('utc').innerText = `UTC: ${utcDate.toLocaleString('en-US', {...options, timeZone: 'UTC'})}`;
+            document.getElementById('est').innerText = `EST: ${utcDate.toLocaleString('en-US', {...options, timeZone: 'America/New_York'})}`;
+            document.getElementById('pst').innerText = `PST: ${utcDate.toLocaleString('en-US', {...options, timeZone: 'America/Los_Angeles'})}`;
+            document.getElementById('cst').innerText = `CST: ${utcDate.toLocaleString('en-US', {...options, timeZone: 'America/Chicago'})}`;
+        }
+
+        setInterval(updateClocks, 1000);
+        updateClocks();
+    </script>
+</body>
+</html>
